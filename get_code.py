@@ -29,7 +29,7 @@ def get_extension_by_lang(lang_id):
     """根据洛谷语言 ID 返回后缀名"""
     # 常见映射，可以根据需要扩充
     mapping = {
-        0: ".cpp", 1: ".pas", 2: ".c", 3: ".cpp", 4: ".cpp", 
+        0: ".cpp", 1: ".py", 2: ".c", 3: ".cpp", 4: ".cpp", 
         7: ".py", 8: ".py", 11: ".cpp", 12: ".cpp", 13: ".java",
         14: ".pas", 16: ".cpp", 20: ".php", 22: ".py", 25: ".cpp",
         26: ".cpp", 27: ".cpp", 28: ".cpp", 34: ".cpp" # 34 通常是 C++17
