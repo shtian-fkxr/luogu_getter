@@ -27,4 +27,4 @@ python ./get_code.py
 
 # 请合理使用本脚本。
 
-$\color{white}\textup{\textmd{有彩蛋哦}}$
+$\color{white}\textup{有彩蛋哦}$
