@@ -37,13 +37,15 @@ pip install requests
 
 ## 🛠️ 使用方法
 
-1. 获取记录：
+1. 在两个程序中填入你的 cookie！在两个程序中填入你的 cookie！在两个程序中填入你的 cookie！
+
+2. 获取记录：
 
    ```bash
    python ./get_record.py
    ```
 
-2. 下载代码：
+3. 下载代码：
 
    ```bash
    python ./get_code.py
