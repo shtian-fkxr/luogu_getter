@@ -31,7 +31,7 @@ def get_extension_by_lang(lang_id):
     mapping = {
         0: ".cpp", 1: ".py", 2: ".c", 3: ".cpp", 4: ".cpp", 
         7: ".py", 8: ".py", 11: ".cpp", 12: ".cpp", 13: ".java",
-        14: ".pas", 16: ".cpp", 20: ".php", 22: ".py", 25: ".cpp",
+        14: ".pas", 16: ".php", 20: ".php", 22: ".py", 25: ".cpp",
         26: ".cpp", 27: ".cpp", 28: ".cpp", 34: ".cpp" # 34 通常是 C++17
     }
     return mapping.get(lang_id, ".txt")
