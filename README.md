@@ -1,30 +1,85 @@
 # luogu_getter
-获取你的洛谷提交记录
 
-由 GPT5 辅助完成。
+获取你的洛谷提交记录，并保存对应代码与网页
 
-# 使用方式
-首先你应该先安装 `pyhton` 和 `requests`。
+###### 有彩蛋哦
 
-然后执行：
+## 📌 项目简介
+
+`luogu_getter` 是一个用于抓取并保存你在洛谷（Luogu）上的提交记录与代码的轻量 Python 脚本集合。
+
+运行后将自动：
+- 获取指定用户的所有提交记录；
+- 保存每次提交的代码和对应 HTML 页面；
+- 以增量方式更新（已抓取过的数据不会重复抓取）。
+
+> ⚠️ 本脚本仅用于合理合法的用途，请遵守洛谷平台使用协议，**不要滥用爬虫对服务器造成压力**。
+
+## 🚀 功能
+
+- 获取并保存洛谷用户的提交记录；
+- 按提交分别下载代码与界面 HTML；
+- 支持增量抓取：已有数据不会重复请求；
+- 输出 `{uid}.json` 文件保存原始记录。
+
+## 📥 依赖环境
+
+请确保你已安装以下运行环境：
+
+- Python 3.6+
+- `requests`
+
+可使用 pip 安装依赖：
+
+```bash
+pip install requests
+````
+
+## 🛠️ 使用方法
+
+1. 获取记录：
+
+   ```bash
+   python ./get_record.py
+   ```
+
+2. 下载代码：
+
+   ```bash
+   python ./get_code.py
+   ```
+
+运行后会生成如下内容：
+
+* `{uid}.json` — 保存获取的全部提交记录；
+* `code/` — 所有提交代码文件；
+* `records/` — 各提交对应的网页 HTML。
+
+## 🧠 工作逻辑
+
+* `get_record.py`：访问洛谷 API /页面接口，按用户 UID 获取所有提交记录；
+* `get_code.py`：读取记录 JSON，下载每次提交包含的代码；
+* 增量逻辑：只处理未保存过的记录以避免重复抓取。
+
+## ⚙️ 示例输出结构
+
 ```
-python ./get_record.py
+.
+├── 123456.json
+├── code
+│   ├── 12345_Pxxxx.cpp
+│   ├── 19345_Uxxxxx.cpp
+│   └── 23456_Bxxxx.py
+└── records
+    ├── 12345.html
+    ├── 19345.html
+    └── 23456.html
 ```
-等待此程序执行完后执行：
-```
-python ./get_code.py
-```
-# 运行结果
-此文件运行后会产生：
 
-`{uid}.json`
+## 📌 注意事项
 
-其中是你的所有提交记录，在运行完 `get_record` 后就会创建，这也是 `get_record` 的全部作用。
+* 洛谷对抓取频率有限制，请控制请求节奏；
+* 如果脚本运行失败，检查账号是否需要登录或页面访问限制；
+* 本项目 Star 越多越有动力更新 😊
 
-`code` 和 `records` 文件夹：里面分别是你所有提交的代码和这个界面的 `html` 代码。
-
-程序采用增量修改，就是说之前获取过的记录不会再次获取。
-
-# 请合理使用本脚本。
-
-$\color{white}\textup{有彩蛋哦}$
+[![Star History Chart](https://api.star-history.com/svg?repos=shtian-fkxr/luogu_getter&type=Date)](https://star-history.com/#shtian-fkxr/luogu_getter&Date)
