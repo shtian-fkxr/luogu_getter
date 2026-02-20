@@ -64,18 +64,17 @@ pip install requests
 * 增量逻辑：只处理未保存过的记录以避免重复抓取。
 
 ## ⚙️ 示例输出结构
-
 ```
 .
 ├── 123456.json
 ├── code
-│   ├── 12345_Pxxxx.cpp
-│   ├── 19345_Uxxxxx.cpp
-│   └── 23456_Bxxxx.py
+│   ├── R12345_Pxxxx.cpp
+│   ├── R19345_Uxxxxx.cpp
+│   └── R23456_Bxxxx.py
 └── records
-    ├── 12345.html
-    ├── 19345.html
-    └── 23456.html
+    ├── R12345.html
+    ├── R19345.html
+    └── R23456.html
 ```
 
 ## 📌 注意事项
