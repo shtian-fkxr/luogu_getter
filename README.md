@@ -59,7 +59,7 @@ pip install requests
 
 ## 🧠 工作逻辑
 
-* `get_record.py`：访问洛谷 API /页面接口，按用户 UID 获取所有提交记录；
+* `get_record.py`：访问 `https://www.luogu.com.cn/record/list?user={your uid}`，按用户 UID 获取所有提交记录；
 * `get_code.py`：读取记录 JSON，下载每次提交包含的代码；
 * 增量逻辑：只处理未保存过的记录以避免重复抓取。
 
